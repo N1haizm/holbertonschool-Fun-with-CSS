@@ -1,0 +1,30 @@
+h2 a {
+    text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+	color: red;
+	position: relative;
+}
+
+a:visited {
+    color: red;
+    text-decoration: none;
+}
+
+a::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	background: red;
+	width: 0;
+	height: 2px;
+	left: 0;
+	transition: all 0.5s;
+}
+
+a:hover::after {
+	width: 100%;
+	left: 0;
+}
